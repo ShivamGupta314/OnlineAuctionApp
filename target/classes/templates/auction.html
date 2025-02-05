@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Active Auctions</title>
+</head>
+<body>
+<h1>Active Auctions</h1>
+
+<table border="1">
+<tr>
+<th>Item Name</th>
+<th>Description</th>
+<th>Starting Price</th>
+<th>Action</th>
+</tr>
+
+<tr th:each="auction : ${auctions}">
+<td th:text="${auction.itemName}"></td>
+<td th:text="${auction.description}"></td>
+<td th:text="${auction.startingPrice}"></td>
+<td><form action="#" th:action="@{/place-bid}" method="post">
+<input type="hidden" name="auctionId" th:value="${auction.id}" />
+<input type="number" name="bidAmount" placeholder="Enter your bid" required />
+<button type="submit">Place Bid</button></form></td></tr>
+
+</table>
+
+<a href="/create-auction">Create New Auction</a>
+
+</body>
+</html>

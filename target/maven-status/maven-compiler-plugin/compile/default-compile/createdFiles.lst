@@ -1,0 +1,10 @@
+com/auction/repository/UserRepository.class
+com/auction/repository/AuctionRepository.class
+com/auction/service/UserService.class
+com/auction/model/Bid.class
+com/auction/service/AuctionService.class
+com/auction/controller/AuctionController.class
+com/auction/model/AuctionListing.class
+com/auction/controller/UserController.class
+com/auction/AuctionApplication.class
+com/auction/model/User.class
